@@ -39,7 +39,7 @@ Please follow this [guide](cfk_operator.m)
 
 # Use cases 
 
-* Topic Depleyment to Confluent Cloud cluster
+* Topic Depleyment to Confluent Cloud cluster, follwo this [guide](usecase_ccloudTopic.md)
 
 # Monitoring
 
