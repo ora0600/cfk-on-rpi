@@ -46,6 +46,12 @@ Please follow this [guide](cfk_operator.m)
 Add die RPI Cluster to my Grafana/Prometheus iMac.
 Coming soon.
 
+# Scripts
+I did prepare three scripts under `scripts` folder.
+* `98_startup_k3scluster.sh` start the k3s cluster software
+* `99_stop_k3scluster.sh` stop the k3s cluster software
+* `99_shutdown_k3scluster.sh` shutdown the compleze Raspberry PIs. After shutdown you can switch off the power.
+
 # Software
 
 we will use the following software to run the cluster on Raspberry PIs

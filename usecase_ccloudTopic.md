@@ -1,6 +1,6 @@
 # Confluent Cloud Topic Deployment with CFK
 
-I followed the examples github repo fo Confluent: [Hybrd ccloud topic](https://github.com/confluentinc/confluent-kubernetes-examples/tree/master/hybrid/ccloud-topic)
+I followed the examples github repo fo Confluent: [Hybrid ccloud topic](https://github.com/confluentinc/confluent-kubernetes-examples/tree/master/hybrid/ccloud-topic)
 
 Download CFK examples and install it or use samples in `resourcefiles`:
 ```bash
