@@ -39,7 +39,7 @@ Please follow this [guide](cfk_operator.md)
 
 # Use cases 
 
-* Topic Depleyment to Confluent Cloud cluster, follwo this [guide](usecase_ccloudTopic.md)
+* Topic Depleyment to Confluent Cloud cluster, follow this [guide](usecase_ccloudTopic.md)
 
 # Monitoring
 
@@ -65,6 +65,8 @@ we will use the following software to run the cluster on Raspberry PIs
 ## Upgrade from 23.10 to 24.04
 
 Follow the steps and see  [Upgrade](https://help.ubuntu.com/community/EOLUpgrades)
+
+Do the upgrade on cpmaster and cpworker1-3:
 
 ```bash
 # UPGRADE FROM 23.10 to 24.04
