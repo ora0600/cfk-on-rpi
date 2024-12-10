@@ -35,7 +35,7 @@ Sp let's start to prepare and setup the cluster.
 # Deploy Confluent for Kubernetes
 
 The installation of CFP Operator in k3s cluster is ver simple. These pre-reqs have to be there.
-Please follow this [guide](cfk_operator.m)
+Please follow this [guide](cfk_operator.md)
 
 # Use cases 
 
