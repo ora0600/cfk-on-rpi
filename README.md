@@ -62,6 +62,24 @@ we will use the following software to run the cluster on Raspberry PIs
 * k3s , v1.27.7+k3s2
 * Confluent for Kubernetes 2.7
 
+## Upgrade from 23.10 to 24.04
+
+Follow the steps and see  [Upgrade](https://help.ubuntu.com/community/EOLUpgrades)
+
+```bash
+# UPGRADE FROM 23.10 to 24.04
+# which version
+cat /etc/os-release
+# Follow Upgrade https://help.ubuntu.com/community/EOLUpgrades
+sudo vi /etc/apt/sources.list
+# replace ports.ubuntu.com/ubuntu-ports to old-releases.ubuntu.com/ubuntu
+
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo reboot
+sudo do-release-upgrade
+```
+
 # Hardware
 
 We will run with Raspberry PI 4B. Best would be with 8 GB RAM, but this is not easy to get today. 4GB RAM do work also quite good. I did add a buying list with links to Amazon, but please keep in mind that Amazon prices are maybe not the best:
