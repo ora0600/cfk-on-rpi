@@ -82,6 +82,39 @@ sudo reboot
 sudo do-release-upgrade
 ```
 
+In that case you can also upgrade the k3s Version.
+Got to each node and update the k3s software
+
+```bash
+# ssh into node and execute
+curl -sfL https://get.k3s.io | sh -s - --docker
+```
+
+Then you can also update Confluent for Kubernetes CFK. For this upgrade stay on your Desktop
+
+```bash
+# Upgrade CFK Operator
+#Upgrade CFK
+helm ls --namespace confluent 
+kubectl get pods -A
+helm delete operator --namespace confluent
+# Install new operator
+# Download bundle
+cd ~/Demos/raspberrypi
+curl -O https://packages.confluent.io/bundle/cfk/confluent-for-kubernetes-2.10.0.tar.gz
+tar xvf confluent-for-kubernetes-2.10.0.tar.gz
+cd confluent-for-kubernetes-2.10.0-20241203/helm 
+helm upgrade --install confluent-operator ./confluent-for-kubernetes --namespace confluent --set licenseKey=<your license key>
+# check is confluent-operator is still there
+helm ls --namespace confluent 
+kubectl get pods --namespace confluent
+kubectl get crd -o=jsonpath="{range .items[*]}{.metadata.name}{'|| \tcontroller-gen.kubebuilder.io/version\t ||'}{.metadata.annotations.controller-gen\.kubebuilder\.io/version}{\"\n\"}{end}" | grep -i confluent
+# Get cluster info
+kubectl cluster-info
+# show all pods and watch
+kubectl get pods -A --watch
+```
+
 # Hardware
 
 We will run with Raspberry PI 4B. Best would be with 8 GB RAM, but this is not easy to get today. 4GB RAM do work also quite good. I did add a buying list with links to Amazon, but please keep in mind that Amazon prices are maybe not the best:
